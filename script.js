@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
     //fungsi menghitung melebihi masa retur
     const selisihHariMelebihiRetur = Math.round(selisihHari - nomor);
     // Cek apakah produk sudah expired
-    if (selisihHari <= nomor) {
+    if (selisihHari <= selisihHariMelebihiRetur) {
       Swal.fire({
         icon: "warning",
         title: "Melebihi Masa Retur",
@@ -51,6 +51,7 @@ document.addEventListener("DOMContentLoaded", function () {
           text: `Produk ini masih bisa di-return, Akan Mendekati Masa Retur Dalam: ${hariBulat} hari.`,
         });
       }
+      
     }
   });
 });
